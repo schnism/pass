@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
+<script src="sha3.js"></script>
+<script src="enc-base64-min.js"></script>
+
+<script>
+</script>
+</head>
+<body>
+
+<form name="it">
+<table>
+<tr><td>Master</td><td><input name=master type=password></input></td></tr>
+<tr><td>Provider</td><td><input name=provider onkeyup="document.it.pass.value = CryptoJS.SHA3(document.it.master.value + document.it.provider.value).toString(CryptoJS.enc.Base64).substring(0,12)+'2!';"></input></td></tr>
+<tr><td>Pass</td><td><input name=pass></input></td></tr>
+</form>
+
+</body>
+
+</html>
